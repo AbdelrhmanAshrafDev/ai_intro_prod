@@ -19,6 +19,28 @@
 
 - the result here will be as simple gui from tkinter lib, you can run as an gui
 
+## About End
+
+- you can see the result with the web app (frontend) when use this file
+
+### How to open
+1. clone or copy (end.py) file on the local machine.
+
+2. run the file till see the output like:
+    ```text
+    Loading text generation pipeline...
+    Pipeline loaded.
+    * Serving Flask app 'end'
+    * Debug mode: on
+    WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+    * Running on http://127.0.0.1:5000
+    Press CTRL+C to quit
+    ```
+
+3. then go to [GPText generator vue app](https://ai-intro-front-generate-text.vercel.app/)
+
+- then use it, possibly see some problems.
+
 ## About Versions
 
 - some versions built while building process for the original project that based on ai
