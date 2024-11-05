@@ -23,6 +23,8 @@
 
 - you can see the result with the web app (frontend) when use this file
 
+![Wep vue App ](/assets/images/web_app.jpg)
+
 ### How to open
 1. clone or copy (end.py) file on the local machine.
 
