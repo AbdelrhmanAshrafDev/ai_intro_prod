@@ -16,19 +16,11 @@ class GPTextGenerator:
             self.generator = pipeline("text-generation", model=self.model_name)
             print("Model loaded successfully.")
 
-    def generate(self, prompt, max_tokens=300, max_steps=5):
+    def generate(self, prompt, max_tokens=300):
         self.load_model()
-        generated_text = prompt
-        for _ in range(max_steps):
-            result = self.generator(generated_text[-max_tokens:], 
-                                    max_length=max_tokens, 
-                                    temperature=self.temperature, 
-                                    num_return_sequences=1)
-            new_text = result[0]["generated_text"]
-            if len(new_text) <= len(generated_text):  # Check for natural stop
-                break
-            generated_text = new_text
-        return generated_text
+        result = self.generator(prompt, max_length=max_tokens, temperature=self.temperature, num_return_sequences=1, truncation=True)
+        generated_text = result[0]["generated_text"]
+        return generated_text.strip()
 
 class TextGeneratorApp:
     def __init__(self, root):
